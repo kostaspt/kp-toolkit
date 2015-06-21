@@ -1,0 +1,16 @@
+{
+  "name": "sass-essentials",
+  "version": "0.0.1",
+  "homepage": "https://github.com/kostaspt/sass-essentials",
+  "authors": [
+    "Konstantinos Pittas <konstantinos.pittas@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
