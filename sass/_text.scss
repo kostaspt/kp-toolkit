@@ -1,0 +1,17 @@
+// Color
+.text-highlight { color: $primary-color; }
+
+// Font Size
+.text-size--xxs { font-size: 0.1em !important }
+.text-size--xs { font-size: 0.3em !important }
+.text-size--s { font-size: 0.7em !important }
+.text-size--l { font-size: 1.3em !important }
+.text-size--xl { font-size: 2.3em !important }
+.text-size--xxl { font-size: 3.3em !important }
+.text-size--xxxl { font-size: 4.3em !important }
+
+// Font Weight
+.text-weight--light { font-weight: $font-weight-light; }
+.text-weight--normal { font-weight: $font-weight-normal; }
+.text-weight--semibold { font-weight: $font-weight-semibold; }
+.text-weight--bold { font-weight: $font-weight-bold; }

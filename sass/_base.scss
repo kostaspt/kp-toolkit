@@ -1,0 +1,9 @@
+html, body, button, input, select, textarea {
+    outline: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// Rounded corners
+.rounded { border-radius: $global-rounded !important; }
+.radius { border-radius: $global-radius !important; }
