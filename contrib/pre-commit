@@ -4,6 +4,6 @@
 gulp
 
 ### Add the compiled CSS
-git add -f build
+git add -f build/*
 
 ### Continue with the commit
