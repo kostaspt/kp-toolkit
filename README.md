@@ -1,6 +1,8 @@
 # kp-toolkit
 
-### Usage
+*Note: It was created to be used with Zurb Foundation*
+
+### SASS Usage
 
 ```scss
 $primary-color: #BADA55;
@@ -10,3 +12,15 @@ $primary-color: #BADA55;
 ```
 
 You can omit the `variables.scss` import, if you want to use your own variables.
+
+### CSS Usage
+
+```css
+<script type="text/javascript" src="bower_components/kp-toolkit/build/toolkit.min.css"></script>
+```
+
+or if you want only the space classes:
+
+```css
+<script type="text/javascript" src="bower_components/kp-toolkit/build/toolkit-spacers.min.css"></script>
+```
