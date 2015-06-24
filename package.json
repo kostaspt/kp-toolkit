@@ -1,5 +1,5 @@
 {
-  "name": "sass-essentials",
+  "name": "kp-toolkit",
   "version": "0.0.2",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kostaspt/sass-essentials.git"
+    "url": "git+https://github.com/kostaspt/kp-toolkit.git"
   },
   "keywords": [
     "sass",
@@ -19,9 +19,9 @@
   "author": "Konstantinos Pittas",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kostaspt/sass-essentials/issues"
+    "url": "https://github.com/kostaspt/kp-toolkit/issues"
   },
-  "homepage": "https://github.com/kostaspt/sass-essentials#readme",
+  "homepage": "https://github.com/kostaspt/kp-toolkit#readme",
   "devDependencies": {
     "del": "^1.2.0",
     "gulp": "^3.9.0",
