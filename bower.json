@@ -1,6 +1,7 @@
 {
   "name": "sass-essentials",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "description": "",
   "homepage": "https://github.com/kostaspt/sass-essentials",
   "authors": [
     "Konstantinos Pittas <konstantinos.pittas@gmail.com>"
