@@ -1,33 +1,44 @@
-@mixin spacer($spacing, $position1: null, $position2: null, $position3: null, $position4: null) {
-    @if ($position1 == left or $position2 == left or $position3 == left or $position4 == left) {
-        margin-left: rem-calc($spacing) !important;
-    }
-    @if ($position1 == right or $position2 == right or $position3 == right or $position4 == right) {
-        margin-right: rem-calc($spacing) !important;
-    }
-    @if ($position1 == top or $position2 == top or $position3 == top or $position4 == top) {
-        margin-top: rem-calc($spacing) !important;
-    }
-    @if ($position1 == bottom or $position2 == bottom or $position3 == bottom or $position4 == bottom) {
-        margin-bottom: rem-calc($spacing) !important;
+
+
+@mixin spacer($spacing, $positions) {
+    @each $position in $positions {
+        @if ($position == left) {
+            margin-left: rem-calc($spacing) !important;
+        }
+
+        @if ($position == right) {
+            margin-right: rem-calc($spacing) !important;
+        }
+
+        @if ($position == top) {
+            margin-top: rem-calc($spacing) !important;
+        }
+
+        @if ($position == bottom) {
+            margin-bottom: rem-calc($spacing) !important;
+        }
     }
 }
 
-@mixin spacer-class($name, $position1: null, $position2: null, $position3: null, $position4: null) {
+@mixin spacer-class($name, $positions: null) {
     .#{$name}--xl {
-        @include spacer($spacing * 4, $position1, $position2, $position3, $position4);
+        @include spacer($spacing * 4, $positions);
     }
+
     .#{$name}--l {
-        @include spacer($spacing * 2, $position1, $position2, $position3, $position4);
+        @include spacer($spacing * 2, $positions);
     }
+
     .#{$name} {
-        @include spacer($spacing, $position1, $position2, $position3, $position4);
+        @include spacer($spacing, $positions);
     }
+
     .#{$name}--s {
-        @include spacer($spacing / 2, $position1, $position2, $position3, $position4);
+        @include spacer($spacing / 2, $positions);
     }
+
     .#{$name}--xs {
-        @include spacer($spacing / 4, $position1, $position2, $position3, $position4);
+        @include spacer($spacing / 4, $positions);
     }
 }
 
@@ -35,10 +46,12 @@
     .#{$size}no-spacer {
         margin: 0 !important;
     }
+
     .#{$size}no-top-spacer {
         margin-top: 0 !important;
         padding-top: 0 !important;
     }
+
     .#{$size}no-bottom-spacer {
         margin-bottom: 0 !important;
         padding-bottom: 0 !important;
@@ -48,8 +61,8 @@
     @include spacer-class(#{$size}right-spacer, right);
     @include spacer-class(#{$size}top-spacer, top);
     @include spacer-class(#{$size}bottom-spacer, bottom);
-    @include spacer-class(#{$size}both-spacer, top, bottom);
-    @include spacer-class(#{$size}all-spacer, left, right, top, bottom);
+    @include spacer-class(#{$size}both-spacer, (top, bottom));
+    @include spacer-class(#{$size}all-spacer, (left, right, top, bottom));
 }
 
 @media #{$small-up} {
