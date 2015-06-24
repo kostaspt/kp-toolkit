@@ -14,14 +14,14 @@ gulp.task('clean', function(cb) {
 gulp.task('default', ['clean'], function() {
     gulp.src('./sass/build.scss')
         .pipe(sass())
-        .pipe(rename('essentials.css'))
+        .pipe(rename('toolkit.css'))
         .pipe(gulp.dest(DEST))
         .pipe(minifyCSS())
         .pipe(rename({ extname: '.min.css' }))
         .pipe(gulp.dest(DEST));
 
     gulp.src(['./sass/variables.scss', './sass/_spacers.scss'])
-        .pipe(concat('essentials-spacers.scss'))
+        .pipe(concat('toolkit-spacers.scss'))
         .pipe(sass())
         .pipe(gulp.dest(DEST))
         .pipe(minifyCSS())
