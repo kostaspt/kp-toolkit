@@ -1,5 +1,3 @@
-
-
 @mixin spacer($spacing, $positions) {
     @each $position in $positions {
         @if ($position == left) {

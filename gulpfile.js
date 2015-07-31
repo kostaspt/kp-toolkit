@@ -7,24 +7,38 @@ var gulp = require('gulp'),
 
 var DEST = 'build/';
 
+var sassOptions = {
+    includePaths: [
+        'bower_components/foundation/scss'
+    ]
+};
+
 gulp.task('clean', function(cb) {
     del([DEST], cb);
 });
 
-gulp.task('default', ['clean'], function() {
-    gulp.src('./sass/build.scss')
-        .pipe(sass())
+gulp.task('compileFull', function() {
+    return gulp.src('sass/build.scss')
+        .pipe(sass(sassOptions))
         .pipe(rename('toolkit.css'))
         .pipe(gulp.dest(DEST))
         .pipe(minifyCSS())
         .pipe(rename({ extname: '.min.css' }))
         .pipe(gulp.dest(DEST));
+});
 
-    gulp.src(['./sass/variables.scss', './sass/_spacers.scss'])
+gulp.task('compileSpacers', function() {
+    return gulp.src(['sass/_foundation.scss', 'sass/_variables.scss', 'sass/_spacers.scss'])
         .pipe(concat('toolkit-spacers.scss'))
-        .pipe(sass())
+        .pipe(sass(sassOptions))
         .pipe(gulp.dest(DEST))
         .pipe(minifyCSS())
         .pipe(rename({ extname: '.min.css' }))
         .pipe(gulp.dest(DEST));
+});
+
+gulp.task('default', ['clean', 'compileFull', 'compileSpacers']);
+
+gulp.task('watch', ['default'], function() {
+    gulp.watch('sass/**/*.scss', ['default']);
 });
