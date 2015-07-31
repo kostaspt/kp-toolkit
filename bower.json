@@ -7,6 +7,9 @@
     "Konstantinos Pittas <konstantinos.pittas@gmail.com>"
   ],
   "license": "MIT",
+  "main": [
+    "sass/toolkit.scss"
+  ],
   "ignore": [
     "**/.*",
     "node_modules",
