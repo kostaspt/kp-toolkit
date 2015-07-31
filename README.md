@@ -5,8 +5,6 @@
 ### SASS Usage
 
 ```scss
-$primary-color: #BADA55;
-
 @import 'bower_components/kp-toolkit/sass/variables';
 @import 'bower_components/kp-toolkit/sass/toolkit';
 ```
