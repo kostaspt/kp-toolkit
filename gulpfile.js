@@ -28,7 +28,7 @@ gulp.task('compileFull', function() {
 });
 
 gulp.task('compileSpacers', function() {
-    return gulp.src(['sass/_foundation.scss', 'sass/_variables.scss', 'sass/_spacers.scss'])
+    return gulp.src(['sass/_variables.scss', 'sass/_spacers.scss'])
         .pipe(concat('toolkit-spacers.scss'))
         .pipe(sass(sassOptions))
         .pipe(gulp.dest(DEST))
