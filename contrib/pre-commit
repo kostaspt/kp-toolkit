@@ -1,9 +1,0 @@
-#!/bin/bash
-
-### Run Gulp
-gulp
-
-### Add the compiled CSS
-git add -f build/*
-
-### Continue with the commit

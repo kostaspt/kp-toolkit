@@ -1,11 +1,4 @@
-# CONFIGS
-.sass-cache
-
-# COMPILED FILES
-*.css.map
-
 # MODULES
-bower_components
 node_modules
 
 # LOGS
