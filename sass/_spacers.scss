@@ -63,18 +63,18 @@
     @include spacer-class(#{$size}all-spacer, (left, right, top, bottom));
 }
 
-@media #{$small-up} {
+@include breakpoint(small up) {
     @include spacer-html-classes($size: small-);
 }
 
-@media #{$medium-up} {
+@include breakpoint(medium up) {
     @include spacer-html-classes($size: medium-);
 }
 
-@media #{$large-up} {
+@include breakpoint(large up) {
     @include spacer-html-classes($size: large-);
 }
 
-@media #{$screen} {
+@include breakpoint(screen) {
     @include spacer-html-classes($size: null);
 }

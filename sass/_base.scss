@@ -5,5 +5,9 @@ html, body, button, input, select, textarea {
 }
 
 // Rounded corners
-.rounded { border-radius: $global-rounded !important; }
-.radius { border-radius: $global-radius !important; }
+.rounded {
+    border-radius: $global-rounded !important;
+}
+.radius {
+    border-radius: $global-radius !important;
+}

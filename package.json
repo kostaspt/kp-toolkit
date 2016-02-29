@@ -1,6 +1,6 @@
 {
   "name": "kp-toolkit",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -22,12 +22,7 @@
     "url": "https://github.com/kostaspt/kp-toolkit/issues"
   },
   "homepage": "https://github.com/kostaspt/kp-toolkit#readme",
-  "devDependencies": {
-    "del": "^1.2.0",
-    "gulp": "^3.9.0",
-    "gulp-concat": "^2.6.0",
-    "gulp-minify-css": "^1.1.6",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.0.1"
+  "dependencies" : {
+    "foundation-sites": "6.*"
   }
 }

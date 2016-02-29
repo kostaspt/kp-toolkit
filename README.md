@@ -1,24 +1,13 @@
 # kp-toolkit
 
-*Note: It was created to be used with Zurb Foundation*
+*Note: It was created to be used with Zurb Foundation for Sites 6+*
 
-### SASS Usage
+### Usage
+
+Add this line inside your main `scss` file.
 
 ```scss
-@import 'bower_components/kp-toolkit/sass/variables';
-@import 'bower_components/kp-toolkit/sass/toolkit';
-```
-
-You can omit the `variables.scss` import, if you want to use your own variables.
-
-### CSS Usage
-
-```css
-<script type="text/javascript" src="bower_components/kp-toolkit/build/toolkit.min.css"></script>
-```
-
-or if you want only the space classes:
-
-```css
-<script type="text/javascript" src="bower_components/kp-toolkit/build/toolkit-spacers.min.css"></script>
+@import '_your_foundation_settings.scss';
+@import 'node_modules/foundation-sites/scss/foundation';
+@import 'node_modules/kp-toolkit/sass/toolkit';
 ```
